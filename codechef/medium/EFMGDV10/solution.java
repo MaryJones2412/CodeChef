@@ -1,42 +1,36 @@
 import java.util.HashMap;
-import java.util.Scanner;
 
-class InventoryManager {
+class CountryCapital {
+
     public static void main(String[] args) {
-        HashMap<String, Integer> inventory = new HashMap<>();
-        Scanner scanner = new Scanner(System.in);
+        // 1. Create a HashMap called countryCapitals
+        HashMap<String, String> countryCapitals = new HashMap<>();
 
-        // Step 1: Input 3 item–quantity pairs
-        for (int i = 0; i < 3; i++) {
-            String item = scanner.next();
-            int quantity = scanner.nextInt();
-            inventory.put(item, quantity);
+        // 2. Add entries to the HashMap
+        countryCapitals.put("USA", "Washington D.C.");
+        countryCapitals.put("France", "Paris");
+        countryCapitals.put("Japan", "Tokyo");
+        countryCapitals.put("India", "New Delhi");
+
+        // 3. Retrieve the capital of France and print it
+        String capitalOfFrance = countryCapitals.get("France");
+        System.out.println("Capital of France: " + capitalOfFrance);
+
+        // 4. Handle missing entries for Germany
+        String capitalOfGermany = countryCapitals.get("Germany");
+        if (capitalOfGermany == null) {
+            System.out.println("Not found");
         }
 
-        // Step 2: Print quantity of "Banana" if present
-        if (inventory.containsKey("Bananas")) {
-            System.out.println("Bananas: " + inventory.get("Bananas"));
+
+        // 5. Remove France from the HashMap
+        countryCapitals.remove("France");
+        
+        // 6. Check if France exists after removing it
+        if (countryCapitals.containsKey("France")) {
+            System.out.println("Exists");
         } else {
-            System.out.println("Bananas not available");
+            System.out.println("Not exists");
         }
-
-        // Step 3: Check if "Apple" exists
-        if (inventory.containsKey("Apples")) {
-            System.out.println("Apples available");
-        } else {
-            System.out.println("Apples not available");
-        }
-
-        // Step 4: If "Orange" exists, increase its quantity by 25
-        if (inventory.containsKey("Oranges")) {
-            int updatedQuantity = inventory.get("Oranges") + 25;
-            inventory.put("Oranges", updatedQuantity);
-            System.out.println("Oranges: " + updatedQuantity);
-        }
-        else{
-            System.out.println("Oranges not available");
-        }
-
-        scanner.close();
     }
 }
