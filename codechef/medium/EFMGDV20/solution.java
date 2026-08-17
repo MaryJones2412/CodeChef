@@ -1,45 +1,46 @@
 import java.util.ArrayList;
 
-class Student {
+class Product {
     private String name;
-    private int grade;
+    private double price;
 
-    public Student(String name, int grade) {
+    public Product(String name, double price) {
         this.name = name;
-        this.grade = grade;
+        this.price = price;
     }
-
+    
     public String getName() {
         return name;
     }
 
-    public int getGrade() {
-        return grade;
+    public double getPrice() {
+        return price;
     }
 }
 
-class StudentFilter {
-    public static void main(String[] args) {
-        ArrayList<Student> students = new ArrayList<>();
-        students.add(new Student("Alice", 10));
-        students.add(new Student("Bob", 8));
-        students.add(new Student("Charlie", 11));
-        students.add(new Student("David", 9));
-        students.add(new Student("Eve", 10));
+class Solution {
 
-        int minGrade = 9;
-        int maxGrade = 10;
-
-        ArrayList<Student> filteredStudents = new ArrayList<>();
-        
-        for(Student student : students){
-            if(student.getGrade()>=minGrade && student.getGrade()<=maxGrade){
-                filteredStudents.add(student);
+    public static ArrayList<Product> filterProductsByPrice(ArrayList<Product> products, double minPrice, double maxPrice) {
+        ArrayList<Product> filteredProducts = new ArrayList<>();
+        for (Product product : products) {
+            if (product.getPrice() >= minPrice && product.getPrice() <= maxPrice) {
+                filteredProducts.add(product);
             }
         }
+        return filteredProducts;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Product> products = new ArrayList<>();
+        products.add(new Product("Laptop", 1200.0));
+        products.add(new Product("Mouse", 25.0));
+        products.add(new Product("Keyboard", 75.0));
+        products.add(new Product("Monitor", 300.0));
+
+        ArrayList<Product> filteredProducts = filterProductsByPrice(products, 50.0, 500.0);
         
-        for(Student student : filteredStudents){
-            System.out.println(student.getName());
+        for (Product product : filteredProducts) {
+            System.out.println(product.getName() + ": " + product.getPrice());
         }
     }
 }
