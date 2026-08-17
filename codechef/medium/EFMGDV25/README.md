@@ -4,50 +4,37 @@
 
 ## Problem
 
-### Counting Boolean Values in ArrayList
-- You have an ArrayList of Boolean objects. Your task is to count how many true values are present in the ArrayList.
-- Complete countTrueValues method by iterating through the ArrayList and increment a counter for each true value you encounter.
-- Then complete the call to countTrueValues. Complete the code to achieve this functionality.
-
- **Output format:** 
-
-```
-Number of true values: 3
-
-```
+_Description not available._
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T10:42:41.229Z  
+**Submitted:** 2026-08-17T10:42:21.733Z  
 
 ```java
 import java.util.ArrayList;
 
-class BooleanCounter {
-
+class EvenSum {
     public static void main(String[] args) {
-        ArrayList<Boolean> booleanList = new ArrayList<>();
-        booleanList.add(true);
-        booleanList.add(false);
-        booleanList.add(true);
-        booleanList.add(true);
-        booleanList.add(false);
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+        numbers.add(6);
 
-        int trueCount = countTrueValues(booleanList);
-        System.out.println("Number of true values: " + trueCount);
-    }
-
-    public static int countTrueValues(ArrayList<Boolean> list) {
-        int count = 0;
-        for (Boolean b : list) {
-            if (b) {
-                count++;
+        int sum = 0;
+        // Iterate through the ArrayList and calculate the sum of even numbers
+        for (Integer number : numbers) {
+            if (number % 2 == 0) {
+                sum += number;
             }
         }
-        return count;
+
+        System.out.println("The sum of even numbers is: " + sum);
     }
 }
 ```
