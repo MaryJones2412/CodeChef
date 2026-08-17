@@ -1,36 +1,36 @@
 import java.util.HashMap;
 
-class PhoneBook {
+class CountryCapital {
+
     public static void main(String[] args) {
-        // Create a HashMap to store names and phone numbers
-        HashMap<String, String> phoneBook = new HashMap<>();
+        // 1. Create a HashMap called countryCapitals
+        HashMap<String, String> countryCapitals = new HashMap<>();
 
-        // Add some entries to the phone book
-        phoneBook.put("Alice", "123-456-7890");
-        phoneBook.put("Bob", "987-654-3210");
-        phoneBook.put("Charlie", "555-123-4567");
+        // 2. Add entries to the HashMap
+        countryCapitals.put("USA", "Washington D.C.");
+        countryCapitals.put("France", "Paris");
+        countryCapitals.put("Japan", "Tokyo");
+        countryCapitals.put("India", "New Delhi");
 
-        // Retrieve Alice's phone number
-        String aliceNumber = phoneBook.get("Alice");
-        System.out.println("Alice's phone number: " + aliceNumber);
+        // 3. Retrieve the capital of France and print it
+        String capitalOfFrance = countryCapitals.get("France");
+        System.out.println("Capital of France: " + capitalOfFrance);
 
-        // Try to retrieve David's phone number (who is not in the phone book)
-        String davidNumber = phoneBook.get("David");
-        if (davidNumber == null) {
-            System.out.println("David's phone number not found.");
+        // 4. Handle missing entries for Germany
+        String capitalOfGermany = countryCapitals.get("Germany");
+        if (capitalOfGermany == null) {
+            System.out.println("Not found");
         }
 
-       // Check if Bob's name exists
-        if (phoneBook.containsKey("Bob")) {
-            System.out.println("Bob's contact exists.");
-        }
 
-        // Remove Charlie's contact
-        phoneBook.remove("Charlie");
-
-        //Check if Charlie's name exists
-        if (!phoneBook.containsKey("Charlie")) {
-            System.out.println("Charlie's contact has been removed.");
+        // 5. Remove France from the HashMap
+        countryCapitals.remove("France");
+        
+        // 6. Check if France exists after removing it
+        if (countryCapitals.containsKey("France")) {
+            System.out.println("Exists");
+        } else {
+            System.out.println("Not exists");
         }
     }
 }
