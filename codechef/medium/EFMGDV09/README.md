@@ -4,49 +4,69 @@
 
 ## Problem
 
-_Description not available._
+### Country-Capital Mapping
+
+Let's work on a problem based on  **`Hashmap`**  to enhance your knowledge. You are going to create a program that stores the capital cities of several countries. You will use a  **`HashMap`**  to `map` country names (as `String` keys) to their corresponding capital cities (as `String` values).
+
+ **Task to perform:** 
+
+- Create a HashMap: Create a HashMap called countryCapitals to store the country-capital mappings.
+- Add entries: Add the following countries and their capitals to the countryCapitals HashMap: USA: Washington D.C. France: Paris Japan: Tokyo India: New Delhi
+- Retrieve a capital: Retrieve the capital city of France and print it to the console.
+- Handle missing entries: Try to retrieve the capital city of Germany. Since Germany is not in the HashMap, print "Not found".
+- Remove a country: Remove "France" from the HashMap.
+- Check if country exists: Check if "France" exists in the HashMap and print "Exists" if it does; otherwise, print "Not exists".
+
+ **Output format:** 
+
+```
+Capital of France: Paris
+Not found
+Not exists
+
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T10:27:00.729Z  
+**Submitted:** 2026-08-17T10:27:18.266Z  
 
 ```java
 import java.util.HashMap;
 
-class PhoneBook {
+class CountryCapital {
+
     public static void main(String[] args) {
-        // Create a HashMap to store names and phone numbers
-        HashMap<String, String> phoneBook = new HashMap<>();
+        // 1. Create a HashMap called countryCapitals
+        HashMap<String, String> countryCapitals = new HashMap<>();
 
-        // Add some entries to the phone book
-        phoneBook.put("Alice", "123-456-7890");
-        phoneBook.put("Bob", "987-654-3210");
-        phoneBook.put("Charlie", "555-123-4567");
+        // 2. Add entries to the HashMap
+        countryCapitals.put("USA", "Washington D.C.");
+        countryCapitals.put("France", "Paris");
+        countryCapitals.put("Japan", "Tokyo");
+        countryCapitals.put("India", "New Delhi");
 
-        // Retrieve Alice's phone number
-        String aliceNumber = phoneBook.get("Alice");
-        System.out.println("Alice's phone number: " + aliceNumber);
+        // 3. Retrieve the capital of France and print it
+        String capitalOfFrance = countryCapitals.get("France");
+        System.out.println("Capital of France: " + capitalOfFrance);
 
-        // Try to retrieve David's phone number (who is not in the phone book)
-        String davidNumber = phoneBook.get("David");
-        if (davidNumber == null) {
-            System.out.println("David's phone number not found.");
+        // 4. Handle missing entries for Germany
+        String capitalOfGermany = countryCapitals.get("Germany");
+        if (capitalOfGermany == null) {
+            System.out.println("Not found");
         }
 
-       // Check if Bob's name exists
-        if (phoneBook.containsKey("Bob")) {
-            System.out.println("Bob's contact exists.");
-        }
 
-        // Remove Charlie's contact
-        phoneBook.remove("Charlie");
-
-        //Check if Charlie's name exists
-        if (!phoneBook.containsKey("Charlie")) {
-            System.out.println("Charlie's contact has been removed.");
+        // 5. Remove France from the HashMap
+        countryCapitals.remove("France");
+        
+        // 6. Check if France exists after removing it
+        if (countryCapitals.containsKey("France")) {
+            System.out.println("Exists");
+        } else {
+            System.out.println("Not exists");
         }
     }
 }
