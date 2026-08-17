@@ -1,40 +1,40 @@
 import java.util.ArrayList;
 
-class Student {
-    String name;
-    int grade;
+class Book {
+    String title;
+    String author;
 
-    public Student(String name, int grade) {
-        this.name = name;
-        this.grade = grade;
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public int getGrade() {
-        return grade;
+    public String getAuthor() {
+        return author;
     }
 }
 
-class School {
+class Library {
     public static void main(String[] args) {
-        ArrayList<Student> students = new ArrayList<>();
+        ArrayList<Book> books = new ArrayList<>();
 
-        // Creating Student objects
-        Student student1 = new Student("Alice", 10);
-        Student student2 = new Student("Bob", 11);
-        Student student3 = new Student("Charlie", 9);
+        // Create some Book objects
+        Book book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien");
+        Book book2 = new Book("Pride and Prejudice", "Jane Austen");
+        Book book3 = new Book("1984", "George Orwell");
 
-        // Adding the students to the ArrayList
-        students.add(student1);
-        students.add(student2);
-        students.add(student3);
+        // Add the Book objects to the ArrayList
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
 
-        // Iterating through the ArrayList and printing each student's name
-        for (Student student : students) {
-            System.out.println(student.getName());
+        // Iterate through the ArrayList and print each book's title
+        for (Book book : books) {
+            System.out.println(book.getTitle());
         }
     }
 }
