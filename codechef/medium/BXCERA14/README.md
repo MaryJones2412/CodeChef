@@ -22,16 +22,9 @@ Implement the method `saveSongs()` which:
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-18T14:23:22.235Z  
+**Submitted:** 2026-08-18T14:23:31.357Z  
 
 ```cpp
-import java.util.Scanner;
-
-class FavoriteSongsList {
-    private ArrayList<String> songs;
-
-    public FavoriteSongsList() {
-        // Initialize the list of songs
         songs = new ArrayList<>();
     }
 
@@ -64,9 +57,16 @@ class Codechef {
         myMusic.saveSongs();
     }
 }
+import java.util.Scanner;
+
+class FavoriteSongsList {
+    private ArrayList<String> songs;
+
+    public FavoriteSongsList() {
+        // Initialize the list of songs
 import java.io.FileWriter;
-import java.io.File;
 import java.util.ArrayList;
+import java.io.File;
 ```
 
 ---
