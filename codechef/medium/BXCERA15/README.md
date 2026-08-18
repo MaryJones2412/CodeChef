@@ -27,45 +27,45 @@ Complete the loadSongs() method so that it:
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-18T15:20:20.729Z  
+**Submitted:** 2026-08-18T15:21:43.067Z  
 
 ```cpp
-        // Create a FavoriteSongsList object
-    public static void main(String[] args) {
-class Codechef {
+        songs = new ArrayList<>();
 
-}
+        // Load songs from file when FavoriteSongsList is created
+        loadSongs(); 
     }
-        }
-                System.out.println((i + 1) + ". " + songs.get(i));
-            }
-            for (int i = 0; i < songs.size(); i++) {
-            System.out.println("Current songs:");
-        } else {
-            System.out.println("No songs in the list.");
-        if (songs.isEmpty()) {
 
-    public void printSongs() {
-    }
-        }
-            System.out.println("No songs file found. Starting with an empty list.");
-        } catch (Exception e) {
-            System.out.println("Songs loaded from songs.txt");
-            scanner.close();
-            }
-                songs.add(song);
+    public void loadSongs() {
+        try {
+            File file = new File("songs.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String song = scanner.nextLine();
-            File file = new File("songs.txt");
-        try {
-    public void loadSongs() {
-
-        loadSongs(); 
+                songs.add(song);
+            }
+            scanner.close();
+            System.out.println("Songs loaded from songs.txt");
+        } catch (Exception e) {
+            System.out.println("No songs file found. Starting with an empty list.");
+        }
     }
-        // Load songs from file when FavoriteSongsList is created
 
-        songs = new ArrayList<>();
+    public void printSongs() {
+        if (songs.isEmpty()) {
+            System.out.println("No songs in the list.");
+        } else {
+            System.out.println("Current songs:");
+            for (int i = 0; i < songs.size(); i++) {
+                System.out.println((i + 1) + ". " + songs.get(i));
+            }
+        }
+    }
+}
+
+class Codechef {
+    public static void main(String[] args) {
+        // Create a FavoriteSongsList object
         FavoriteSongsList newMusic = new FavoriteSongsList();
         
         newMusic.printSongs();
