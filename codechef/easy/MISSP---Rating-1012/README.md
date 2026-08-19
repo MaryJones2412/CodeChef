@@ -75,7 +75,7 @@ For this case [1, 1, 2, 2, 3], we have two dolls of type 1 and 2, but only one d
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T01:15:20.508Z  
+**Submitted:** 2026-08-19T01:16:38.126Z  
 
 ```java
 import java.util.*;
@@ -87,12 +87,12 @@ class Codechef
     public static void main (String[] args) throws java.lang.Exception
     {
         Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        while (T-- > 0) {
-            int N = sc.nextInt();
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            int n = sc.nextInt();
             HashMap<Integer, Integer> freqMap = new HashMap<>();
             
-            for (int i = 0; i < N; i++) {
+            for (int i = 0; i < n; i++) {
                 int dollType = sc.nextInt();
                 freqMap.put(dollType, freqMap.getOrDefault(dollType, 0) + 1);
             }
