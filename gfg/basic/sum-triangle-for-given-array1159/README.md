@@ -51,7 +51,7 @@ Reading the triangle from top to bottom and left to right gives: [9, 3, 6, 1, 2,
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T10:29:15.018Z  
+**Submitted:** 2026-08-19T10:42:36.037Z  
 
 ```java
 class Solution {
