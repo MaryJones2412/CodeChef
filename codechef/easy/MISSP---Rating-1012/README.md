@@ -75,7 +75,7 @@ For this case [1, 1, 2, 2, 3], we have two dolls of type 1 and 2, but only one d
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-20T15:29:45.585Z  
+**Submitted:** 2026-08-20T15:32:34.070Z  
 
 ```java
 import java.util.*;
