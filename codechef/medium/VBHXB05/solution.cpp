@@ -1,6 +1,12 @@
-console.log(currentHour);
+const options = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
+const currentHour = new Intl.DateTimeFormat('en-US', options).format(new Date());
 
-// complete your code from here
+let greeting;
+
+if (currentHour < 12) {
+    greeting = "Good Morning!";
+}
+else if(currentHour>=12 && currentHour<=18)
 {
     greeting="Good Afternoon!";
 }
@@ -8,14 +14,7 @@ else
 {
     greeting="Good Evening!";
 }
+// complete your code from here
+
+console.log(currentHour);
 console.log(greeting);
-
-else if(currentHour>=12 && currentHour<=18)
-}
-    greeting = "Good Morning!";
-
-if (currentHour < 12) {
-
-let greeting;
-const currentHour = new Intl.DateTimeFormat('en-US', options).format(new Date());
-const options = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
