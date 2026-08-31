@@ -27,12 +27,18 @@ Good Afternoon!
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-31T07:19:20.692Z  
+**Submitted:** 2026-08-31T07:26:25.558Z  
 
 ```cpp
-console.log(currentHour);
+const options = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
+const currentHour = new Intl.DateTimeFormat('en-US', options).format(new Date());
 
-// complete your code from here
+let greeting;
+
+if (currentHour < 12) {
+    greeting = "Good Morning!";
+}
+else if(currentHour>=12 && currentHour<=18)
 {
     greeting="Good Afternoon!";
 }
@@ -40,17 +46,11 @@ else
 {
     greeting="Good Evening!";
 }
+// complete your code from here
+
+console.log(currentHour);
 console.log(greeting);
 
-else if(currentHour>=12 && currentHour<=18)
-}
-    greeting = "Good Morning!";
-
-if (currentHour < 12) {
-
-let greeting;
-const currentHour = new Intl.DateTimeFormat('en-US', options).format(new Date());
-const options = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
 ```
 
 ---
