@@ -32,7 +32,7 @@ Explanation: Frog with strength 1 visits leaves 1, 2, 3, 4, 5, 6 every leaf. All
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T09:59:58.135Z  
+**Submitted:** 2026-08-31T09:26:16.086Z  
 
 ```java
 
