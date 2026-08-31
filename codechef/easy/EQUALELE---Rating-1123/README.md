@@ -75,7 +75,7 @@ Thus, the final array is $[3, 3, 3, 3]$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T01:07:59.865Z  
+**Submitted:** 2026-08-31T07:07:16.043Z  
 
 ```java
 import java.util.*;
@@ -89,18 +89,14 @@ class Codechef {
         
         while (t-- > 0) {
             int n = sc.nextInt();
-            
             ArrayList<Integer> a = new ArrayList<>(n);
             for (int i = 0; i < n; i++) {
                 a.add(sc.nextInt());
             }
-            
             HashMap<Integer, Integer> freq = new HashMap<>();
-            
             for (int x : a) {
                 freq.put(x, freq.getOrDefault(x, 0) + 1);
             }
-            
             int maxFreq = 0;
             for (int count : freq.values()) {
                 if (count > maxFreq) {
@@ -110,7 +106,6 @@ class Codechef {
             
             System.out.println(n - maxFreq);
         }
-        
         sc.close();
     }
 }
