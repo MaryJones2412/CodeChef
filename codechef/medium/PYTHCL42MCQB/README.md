@@ -4,16 +4,24 @@
 
 ## Problem
 
-_Description not available._
+### Multiple Choice Question
+
+What will this code output?
+
+```
+s = "abcdefghij"
+print(s[8:3:-2])
+
+```
 
 ## Solution
 
-**Language:** Python  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T07:11:01.965Z  
+**Submitted:** 2026-09-02T07:11:35.805Z  
 
-```py
+```cpp
 text = "Playground"
 print(text[6:1:-1])
 ```
