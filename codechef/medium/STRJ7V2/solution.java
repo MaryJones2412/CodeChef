@@ -2,11 +2,10 @@ class Codechef
 {
 	public static void main (String[] args)
 	{
-		// your code goes here
-		String word = "Ocygen";
-        char[] wordArray = word.toCharArray();
-        wordArray[1] = 'x';
-        word = new String(wordArray);
-        System.out.println(word);
+	   // Update the blank in code given below
+		String var = "String";
+        System.out.print(var.charAt(0));  // Print the first 3 characters
+        System.out.print(var.charAt(1));
+        System.out.print(var.charAt(2));
 	}
 }
