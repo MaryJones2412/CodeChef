@@ -61,7 +61,7 @@ Happy
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T15:34:29.170Z  
+**Submitted:** 2026-09-04T15:34:36.572Z  
 
 ```java
 import java.util.Scanner;
@@ -71,7 +71,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
 
-        while (t-- > 0) {
+        while (t--> 0) {
             String s = scanner.next();
 
             boolean isHappy = false;
