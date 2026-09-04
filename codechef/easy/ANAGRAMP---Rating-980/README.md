@@ -49,7 +49,7 @@ YES
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T13:47:17.401Z  
+**Submitted:** 2026-09-04T13:49:00.984Z  
 
 ```java
 import java.util.*;
@@ -69,15 +69,11 @@ class Codechef
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        if (!scanner.hasNextInt()) return;
-        int t = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-        
-        while (t-- > 0) {
+        scanner.nextLine(); 
             String str1 = scanner.nextLine();
             String str2 = scanner.nextLine();
             System.out.println(areAnagrams(str1, str2) ? "YES" : "NO");
-        }
+        
 
 	}
 }
