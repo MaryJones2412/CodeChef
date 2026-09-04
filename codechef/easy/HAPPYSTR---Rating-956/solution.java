@@ -5,7 +5,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
 
-        while (t-- > 0) {
+        while (t--> 0) {
             String s = scanner.next();
 
             boolean isHappy = false;
