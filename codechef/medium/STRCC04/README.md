@@ -44,7 +44,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T15:43:14.706Z  
+**Submitted:** 2026-09-04T15:43:23.236Z  
 
 ```c_cpp
 //Solution as follows
