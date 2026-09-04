@@ -5,29 +5,20 @@ import java.io.*;
 class Codechef {
     public static void main (String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+        String s = sc.nextLine();
+
+        int length = 0;
+        int i = s.length() - 1;
+
+        while (i >= 0 && s.charAt(i) == ' ') {
+            i--;
         }
 
-        List<Integer> uniqueElements = new ArrayList<>();
-        Set<Integer> seen = new HashSet<>();
-
-        for (int x : arr) {
-            if (!seen.contains(x)) {
-                uniqueElements.add(x);
-                seen.add(x);
-            }
+        while (i >= 0 && s.charAt(i) != ' ') {
+            length++;
+            i--;
         }
-
-        for (int i = 0; i < uniqueElements.size(); i++) {
-            System.out.print(uniqueElements.get(i));
-            if (i != uniqueElements.size() - 1) {
-                System.out.print(" ");
-            }
-        }
-        System.out.println();
+        System.out.println(length);
         sc.close();
     }
 }
