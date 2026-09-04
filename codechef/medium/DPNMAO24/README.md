@@ -4,14 +4,47 @@
 
 ## Problem
 
-_Description not available._
+### Last Word Length
+
+You are given a string $S$ which consists of words and spaces.
+Your task is to find the length of the last word in the string. A word is defined as a maximal substring consisting of non space characters only. The string may have leading or trailing spaces.
+
+### Input Format
+- The first and only line of input contains the string $S$.
+### Output Format
+- Print a single integer representing the length of the last word.
+### Constraints
+- $1 \leq |S| \leq 10^5$
+### Sample 1:
+Input
+Output
+
+```
+  I am  a passionate   Developer  
+```
+
+```
+9
+```
+
+### Sample 2:
+Input
+Output
+
+```
+Hello World
+```
+
+```
+5
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T10:51:43.820Z  
+**Submitted:** 2026-09-04T15:22:11.860Z  
 
 ```java
 import java.util.*;
@@ -21,29 +54,20 @@ import java.io.*;
 class Codechef {
     public static void main (String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+        String s = sc.nextLine();
+
+        int length = 0;
+        int i = s.length() - 1;
+
+        while (i >= 0 && s.charAt(i) == ' ') {
+            i--;
         }
 
-        List<Integer> uniqueElements = new ArrayList<>();
-        Set<Integer> seen = new HashSet<>();
-
-        for (int x : arr) {
-            if (!seen.contains(x)) {
-                uniqueElements.add(x);
-                seen.add(x);
-            }
+        while (i >= 0 && s.charAt(i) != ' ') {
+            length++;
+            i--;
         }
-
-        for (int i = 0; i < uniqueElements.size(); i++) {
-            System.out.print(uniqueElements.get(i));
-            if (i != uniqueElements.size() - 1) {
-                System.out.print(" ");
-            }
-        }
-        System.out.println();
+        System.out.println(length);
         sc.close();
     }
 }
