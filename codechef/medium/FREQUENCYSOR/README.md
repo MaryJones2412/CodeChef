@@ -104,10 +104,11 @@ bbbdddaac
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-06T10:38:06.030Z  
+**Submitted:** 2026-09-06T10:39:27.925Z  
 
 ```java
 import java.util.*;
+
 public class Solution {
     public static String sortByFrequency(String s) {
         Map<Character, Integer> freq = new HashMap<>();
@@ -135,6 +136,15 @@ public class Solution {
         }
 
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.hasNext()) {
+            String s = scanner.next();
+            System.out.println(sortByFrequency(s));
+        }
+        scanner.close();
     }
 }
 ```
