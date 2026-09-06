@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class Solution {
     public static String sortByFrequency(String s) {
         Map<Character, Integer> freq = new HashMap<>();
@@ -26,5 +27,14 @@ public class Solution {
         }
 
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.hasNext()) {
+            String s = scanner.next();
+            System.out.println(sortByFrequency(s));
+        }
+        scanner.close();
     }
 }
