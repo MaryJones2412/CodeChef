@@ -23,7 +23,7 @@
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-06T09:36:47.336Z  
+**Submitted:** 2026-09-06T09:37:31.684Z  
 
 ```java
 class CircularQueue {
@@ -32,19 +32,15 @@ class CircularQueue {
     private int front = 0; // Index of the front element
     private int rear = -1;  // Index of the rear element
     private int currentSize;
-
     public boolean isEmpty() {
         return currentSize == 0;
     }
-
     public boolean isFull() {
         return currentSize == maxSize;
     }
-
     public int size() {
         return currentSize;
     }
-
     public void enqueue(int item) {
         if (isFull()) {
             System.out.println("Queue is full. Cannot enqueue.");
@@ -54,7 +50,6 @@ class CircularQueue {
         a[rear] = item;
         currentSize++;
     }
-
     public int dequeue() {
         if (isEmpty()) {
             System.out.println("Queue is empty. Cannot dequeue.");
