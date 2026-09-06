@@ -104,28 +104,26 @@ bbbdddaac
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-06T10:38:10.322Z  
+**Submitted:** 2026-09-06T10:44:11.252Z  
 
 ```java
-import java.util.*;
-public class Solution {
-    public static String sortByFrequency(String s) {
+public static String sortByFrequency(String s) {
         Map<Character, Integer> freq = new HashMap<>();
         for (char c : s.toCharArray()) {
             freq.put(c, freq.getOrDefault(c, 0) + 1);
         }
-
         List<Character> chars = new ArrayList<>(freq.keySet());
 
         Collections.sort(chars, (a, b) -> {
             int fa = freq.get(a);
             int fb = freq.get(b);
             if (fa != fb) {
-                return fb - fa;
+                return fb - fa; 
             }
-            return a - b;
+            return a - b; 
         });
 
+  
         StringBuilder result = new StringBuilder();
         for (char c : chars) {
             int count = freq.get(c);
@@ -136,7 +134,7 @@ public class Solution {
 
         return result.toString();
     }
-}
+
 ```
 
 ---
