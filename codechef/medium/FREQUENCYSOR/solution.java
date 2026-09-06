@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Solution {
     public static String sortByFrequency(String s) {
         Map<Character, Integer> freq = new HashMap<>();
