@@ -104,13 +104,10 @@ bbbdddaac
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-06T10:39:27.925Z  
+**Submitted:** 2026-09-06T10:43:33.499Z  
 
 ```java
-import java.util.*;
-
-public class Solution {
-    public static String sortByFrequency(String s) {
+public static String sortByFrequency(String s) {
         Map<Character, Integer> freq = new HashMap<>();
         for (char c : s.toCharArray()) {
             freq.put(c, freq.getOrDefault(c, 0) + 1);
@@ -118,15 +115,17 @@ public class Solution {
 
         List<Character> chars = new ArrayList<>(freq.keySet());
 
+        // Sort by frequency (descending), then lexicographical (ascending)
         Collections.sort(chars, (a, b) -> {
             int fa = freq.get(a);
             int fb = freq.get(b);
             if (fa != fb) {
-                return fb - fa;
+                return fb - fa; // higher frequency first
             }
-            return a - b;
+            return a - b; // lexicographical order if equal frequency
         });
 
+        // Build result string
         StringBuilder result = new StringBuilder();
         for (char c : chars) {
             int count = freq.get(c);
@@ -138,15 +137,6 @@ public class Solution {
         return result.toString();
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        if (scanner.hasNext()) {
-            String s = scanner.next();
-            System.out.println(sortByFrequency(s));
-        }
-        scanner.close();
-    }
-}
 ```
 
 ---
