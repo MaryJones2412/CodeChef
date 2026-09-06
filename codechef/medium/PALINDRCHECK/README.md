@@ -69,7 +69,7 @@ fun is Science Data
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T15:50:47.965Z  
+**Submitted:** 2026-09-06T09:29:01.121Z  
 
 ```java
 public static String reverseWords(String s) {
