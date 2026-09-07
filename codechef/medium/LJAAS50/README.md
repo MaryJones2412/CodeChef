@@ -26,7 +26,7 @@ Code Chef
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-07T00:48:01.181Z  
+**Submitted:** 2026-09-07T00:48:05.680Z  
 
 ```java
 import java.util.Scanner;
