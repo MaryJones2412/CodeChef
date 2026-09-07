@@ -4,25 +4,41 @@
 
 ## Problem
 
-_Description not available._
+### Print the sentence
+
+Write a program that takes the two different strings as input and prints them in a single line separated by spaces.
+
+### Sample 1:
+Input
+Output
+
+```
+Code
+Chef
+```
+
+```
+Code Chef
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-07T00:47:46.887Z  
+**Submitted:** 2026-09-07T00:48:01.181Z  
 
 ```java
 import java.util.Scanner;
+
 class Codechef
 {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        double radius = scanner.nextDouble();
-        double area = 3.14 * radius * radius;
-        System.out.println(area);
+        String one = scanner.nextLine();
+        String two = scanner.nextLine();
+        System.out.println(one + " " + two);
     }
 }
 ```
