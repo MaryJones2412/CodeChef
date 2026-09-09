@@ -27,7 +27,7 @@ Click "RUN" to run the code and see the output! Click on "SUBMIT" to go to the n
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T06:58:20.275Z  
+**Submitted:** 2026-09-09T06:58:15.687Z  
 
 ```cpp
             res.end(data);
