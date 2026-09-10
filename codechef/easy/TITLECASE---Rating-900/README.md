@@ -56,7 +56,7 @@ Programming In PYTHON
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-08T01:07:54.821Z  
+**Submitted:** 2026-09-10T01:07:52.197Z  
 
 ```java
 import java.util.Scanner;
@@ -64,27 +64,22 @@ import java.util.Scanner;
 class CodeChef {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        int t = Integer.parseInt(sc.nextLine()); 
+        int t = Integer.parseInt(sc.nextLine());
 
         while (t-- > 0) {
-            String s = sc.nextLine();
-            String[] w = s.split(" ");
-            StringBuilder sb = new StringBuilder();
+            String[] words = sc.nextLine().split(" ");
+            String result = "";
 
-            for (String x : w) {
-                if (x.equals(x.toUpperCase())) {
-                    sb.append(x);
+            for (String w : words) {
+                if (w.equals(w.toUpperCase())) {
+                    result += w + " ";
                 } else {
-                    String f = x.substring(0, 1).toUpperCase() + x.substring(1).toLowerCase();
-                    sb.append(f);
+                    String formatted = w.substring(0, 1).toUpperCase() + w.substring(1).toLowerCase();
+                    result += formatted + " ";
                 }
-                sb.append(" ");
             }
-
-            System.out.println(sb.toString().trim());
+            System.out.println(result.trim());
         }
-
         sc.close();
     }
 }
