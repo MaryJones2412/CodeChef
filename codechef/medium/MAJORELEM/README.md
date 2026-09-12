@@ -61,7 +61,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T01:21:22.992Z  
+**Submitted:** 2026-09-12T14:25:18.867Z  
 
 ```java
 import java.util.HashMap;
