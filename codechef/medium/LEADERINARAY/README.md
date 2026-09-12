@@ -73,27 +73,33 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-12T14:29:02.426Z  
+**Submitted:** 2026-09-12T14:28:21.887Z  
 
 ```java
 class Solution {
-    public List<Integer> findLeaders(int[] a) {
-        int n = a.length;
-        List<Integer> l = new ArrayList<>();
-        int m = a[n - 1];
-        l.add(m);
+    public List<Integer> findLeaders(int[] nums) {
+        int n = nums.length;
+        List<Integer> leaders = new ArrayList<>();
+        int maxFromRight = nums[n - 1];
 
+        // Last element is always a leader
+        leaders.add(nums[n - 1]);
+
+        // Traverse from right to left
         for (int i = n - 2; i >= 0; i--) {
-            if (a[i] > m) {
-                l.add(a[i]);
-                m = a[i];
+            if (nums[i] > maxFromRight) {
+                leaders.add(nums[i]);
+                maxFromRight = nums[i];
             }
         }
 
-        Collections.reverse(l);
-        return l;
+        // Reverse list to maintain original order
+        Collections.reverse(leaders);
+        return leaders;
     }
 }
+
+
 ```
 
 ---
