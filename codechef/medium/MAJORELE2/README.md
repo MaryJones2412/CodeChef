@@ -82,17 +82,14 @@ Here,  **n = 7**, so `[n/3]` = 2.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T01:26:31.529Z  
+**Submitted:** 2026-09-12T14:26:20.963Z  
 
 ```java
 public static List<Long> findSuperstarDishes(List<Long> a, int n) {
     long el1 = Long.MIN_VALUE, el2 = Long.MIN_VALUE;
     int cnt1 = 0, cnt2 = 0;
-
-    // Phase 1: Voting
     for (int i = 0; i < n; i++) {
         long val = a.get(i);
-
         if (val == el1) cnt1++;
         else if (val == el2) cnt2++;
         else if (cnt1 == 0) {
@@ -108,17 +105,14 @@ public static List<Long> findSuperstarDishes(List<Long> a, int n) {
             cnt2--;
         }
     }
-
     // Phase 2: Validation
     cnt1 = 0;
     cnt2 = 0;
-
     for (int i = 0; i < n; i++) {
         long val = a.get(i);
         if (val == el1) cnt1++;
         else if (val == el2) cnt2++;
     }
-
     List<Long> ans = new ArrayList<>();
     if (cnt1 > n / 3) ans.add(el1);
     if (cnt2 > n / 3) ans.add(el2);
