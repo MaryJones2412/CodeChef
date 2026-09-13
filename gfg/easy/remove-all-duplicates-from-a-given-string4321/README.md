@@ -27,20 +27,22 @@ Explanation: After removing duplicate characters such as e, a, we have string as
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-13T14:59:57.364Z  
+**Submitted:** 2026-09-13T15:00:32.790Z  
 
 ```java
+import java.util.*;
+
 class Solution {
     String removeDuplicates(String s) {
-        boolean[] seen = new boolean[128];
+        HashSet<Character> set = new HashSet<>();
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
 
-            if (!seen[ch]) {
+            if (!set.contains(ch)) {
                 result.append(ch);
-                seen[ch] = true;
+                set.add(ch);
             }
         }
 
