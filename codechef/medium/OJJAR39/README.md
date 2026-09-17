@@ -4,27 +4,43 @@
 
 ## Problem
 
-_Description not available._
+### Double the Numbers
+
+Given an array of numbers, create a new array where each number is double the value of the corresponding number in the original array. Note: While `map` is often preferred for creating new arrays, this exercise shows how you can achieve it using `forEach` and an external array.
+
+### Sample 1:
+Input
+Output
+
+```
+[1, 5, 10]
+```
+
+```
+Doubled: [ 2, 10, 20 ]
+```
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-17T10:49:57.801Z  
+**Submitted:** 2026-09-17T10:52:11.508Z  
 
 ```js
-let scores = [10, 45, 23, 8];
-let totalScore = 0; 
+let originalNumbers = [1, 5, 10];
 
-// complete the code 
-scores.forEach(score=>{totalScore+=score;});
-// Use forEach to go through each score
+// Create an empty array to store the results
+let doubledNumbers=[];
+originalNumbers.forEach(num=>{doubledNumbers.push(num*2);});
+// Iterate over the original numbers
 
-// Add the current score to the totalScore
-  
+// Calculate the doubled value
 
-console.log("Total Score:", totalScore); 
+// Add the doubled value to our new array
+
+
+console.log("Doubled:" ,doubledNumbers);
 ```
 
 ---
