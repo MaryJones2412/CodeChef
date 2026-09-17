@@ -1,11 +1,13 @@
-let scores = [10, 45, 23, 8];
-let totalScore = 0; 
+let originalNumbers = [1, 5, 10];
 
-// complete the code 
-scores.forEach(score=>{totalScore+=score;});
-// Use forEach to go through each score
+// Create an empty array to store the results
+let doubledNumbers=[];
+originalNumbers.forEach(num=>{doubledNumbers.push(num*2);});
+// Iterate over the original numbers
 
-// Add the current score to the totalScore
-  
+// Calculate the doubled value
 
-console.log("Total Score:", totalScore); 
+// Add the doubled value to our new array
+
+
+console.log("Doubled:" ,doubledNumbers);
