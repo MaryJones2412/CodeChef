@@ -21,7 +21,7 @@ Now, let’s see the complete code that you can run to observe the output.
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-18T15:26:57.817Z  
+**Submitted:** 2026-09-18T15:28:06.483Z  
 
 ```js
 let names = ["John", "Emily", "Michael", "Sara", "Chris", "Kate"];
