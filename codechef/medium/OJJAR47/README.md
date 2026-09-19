@@ -13,7 +13,7 @@ You are given an array of strings, where each string is a word. Your task is to 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-19T00:45:55.513Z  
+**Submitted:** 2026-09-19T00:46:01.853Z  
 
 ```js
 const words = ["apple", "banana", "cherry", "watermelon", "kiwi"];
