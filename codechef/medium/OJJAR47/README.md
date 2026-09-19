@@ -4,24 +4,29 @@
 
 ## Problem
 
-_Description not available._
+### Sum Total Amount Spent
+
+You are given an array of strings, where each string is a word. Your task is to find and return the longest word in the array. If there are multiple words with the same maximum length, return the one that appears first. Use the `reduce()` method to solve this problem.
 
 ## Solution
 
 **Language:** JavaScript  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-19T00:42:20.707Z  
+**Submitted:** 2026-09-19T00:45:55.513Z  
 
 ```js
-const cartPrices = [29.99, 9.99, 4.99, 14.99, 25.00];
+const words = ["apple", "banana", "cherry", "watermelon", "kiwi"];
 
 // complete the code 
-// Using reduce to calculate the total price
-const totalPrice = cartPrices.reduce((total,price)=>{
-    return total+price;
-},0) ;
-console.log(totalPrice);
+const longestWord=words.reduce((longest,word)=>{
+    return word.length> longest.length?word:longest;
+},"");
+console.log(longestWord);
+
+
+
+
 ```
 
 ---
